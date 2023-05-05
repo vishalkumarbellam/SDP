@@ -9,12 +9,9 @@ def captureFace():
 
         if ret:
             cv2.imshow("video",frame)
-        else:
-            return (-1,'')
 
         if cv2.waitKey(1) & 0xFF ==ord('q'):
             break
 
     vc.release()
     cv2.destroyAllWindows
-    return (1,"captured")
